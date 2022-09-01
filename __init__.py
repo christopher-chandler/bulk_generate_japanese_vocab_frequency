@@ -6,4 +6,4 @@
 # Copyright: (c) 2017 Glutanimate <https://glutanimate.com/>
 # License: GNU AGPLv3 <https://www.gnu.org/licenses/agpl.html>
 
-from . import freq_dict
+from . import main
