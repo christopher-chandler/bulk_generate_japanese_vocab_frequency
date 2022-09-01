@@ -1,0 +1,7 @@
+{
+    "0_freq_dict": "",
+    "01_note_type": "Japanese",
+    "02_vocab_input_field": "Target Word",
+    "03_frequency_output_field": "Frequency Ranking",
+    "04_overwrite_destination_field": true
+}

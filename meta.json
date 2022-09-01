@@ -1,0 +1,13 @@
+{
+    "name": "Bulk-Generate Japanese Vocab Frequency Ranking",
+    "mod": 1552259310,
+    "min_point_version": 0,
+    "max_point_version": 0,
+    "branch_index": 0,
+    "config": {
+        "01_modelName": "Custom Migaku Japanese (Vocab/Vocab Audio/Sentence)",
+        "02_Vocab_SrcField": "Target Word",
+        "04_Output_SrcField": "Frequency",
+        "05_OVERWRITE_DST_FIELD": true
+    }
+}
