@@ -6,4 +6,11 @@
 # Copyright: (c) 2017 Glutanimate <https://glutanimate.com/>
 # License: GNU AGPLv3 <https://www.gnu.org/licenses/agpl.html>
 
+# Standard
+#
+
+# Custom
+# None
+
+# Pip
 from . import main
