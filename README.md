@@ -16,10 +16,10 @@
 ![Windows][windows-shield] ![Mac][Mac-shield]
 
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Bulk Generate Japanese Vocab Frequency</h3>
 
   <p align="center">
-    project_description
+    Add frequency to Japanese vocab cards.
     <br />
     <br />
     <a href="https://github.com/christopher-chandler/Bulk_Generate_Japanese_Vocab_Frequency/issues">Report Bug</a>
@@ -65,19 +65,17 @@
 </div>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
+This add-on will generate the frequency ranking for the provided Japanese vocab field 
+The frequency ranking is generated from the same frequency database of the 
+Rikai-Sama,i.e., JMDict  firefox add-on.
 
 ### Built With
 
-A list of frameworks that were used in developing the program. 
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+This project is written in pure python and the respective Anki libraries.
+  ```
+anki~=2.1.54
+aqt~=2.1.54
+  ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -86,32 +84,38 @@ A list of frameworks that were used in developing the program.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To get to started, you have to install the add-on through Anki.
+You can also install it via the files provided on Github.
+
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+You must set the variables of the  ```config.json```
+
+```
+{
+    "freq_dict": "",
+    "01_note_type": "Japanese",
+    "02_vocab_input_field": "Target Word",
+    "03_frequency_output_field": "Frequency Ranking",
+    "04_overwrite_destination_field": true
+}
+```
+
+* ```freq_dict```: The path of the frequency dictionary. 
+It is coupled with the add-on and is located in the project directory.
+You only need to copy the path of the standard dictionary or the one you provide.
+* ```01_note_type``` The name of the note type which contains the vocab for which the frequency rate should be determined.
+* ```02_vocab_input_field``` The field that contains the target word
+* ```"03_frequency_output_field"``` The field where frequency rating should be saved.
+* ```04_overwrite_destination_field``` Overwrite frequency value of the output filed (automatically set to true)
+
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/christopher-chandler/Bulk_Generate_Japanese_Vocab_Frequency.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+There are two ways to install this add-on:
+* Add the add-on via anki using the code ```1004691625```
+* Install the add-on via the files provided on Github.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -120,21 +124,31 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. 
-Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-For more examples, please refer to the [Documentation](https://example.com)
+For example, if you have a card with the vocab ``頬杖``,
+then the frequency ranking of "14962" will be appended to the chosen destination field.
 
+### What does this frequency number mean?
+
+* If a word has a frequency of 1563, it means that 1562 words are more frequent than it. 
+* Frequency number 1-5000 = very common, 5001-10000 = common, 10001-20000 = rare, 20001+ = very rare
+* Frequencies are based on analysis of 5000+ novels. Naturally, frequency based on other mediums (such as newspapers) might vary.
+* Not all words have frequency information. It is possible for multiple words to share the same frequency.
+
+* More info in Rikai-Sama Add-on or its frequency ranking can be found on 
+* his site at http://rikaisama.sourceforge.net/
+* You can also reference to the original project https://ankiweb.net/shared/info/1612642956
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+
+# Example
 
 
 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [ ] Add Jmdict support
+
 
 See the [open issues](https://github.com/christopher-chandler/Bulk_Generate_Japanese_Vocab_Frequency/issues) for a full list of proposed 
 features (and known issues).
@@ -166,7 +180,18 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+The licensing information of the project upon which
+this add-on is based.
+
+  ```
+For those asking for the License permission, 
+it's WTFPL. So please feel free to modify/re-upload 
+a better version whenever you like.
+  ```
+
+Therefore, this project is distributed 
+under the MIT License. See `LICENSE.txt` 
+for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -186,9 +211,7 @@ Project Link: [https://github.com/christopher-chandler/Bulk_Generate_Japanese_Vo
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+* @author: Myxoma (original creator)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
