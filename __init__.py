@@ -7,10 +7,13 @@
 # License: GNU AGPLv3 <https://www.gnu.org/licenses/agpl.html>
 
 # Standard
-#
-
-# Custom
 # None
 
-# Pip
+# Custom
 from . import main
+
+# Pip
+from anki.hooks import addHook
+
+# Hook Add-on
+addHook("browser.setupMenus", main.set_up_edit_menu)

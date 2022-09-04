@@ -12,6 +12,7 @@ both fields are specified by the user.
 """
 
 # Standard
+import os
 import sqlite3
 from sqlite3 import OperationalError
 
@@ -19,11 +20,17 @@ from sqlite3 import OperationalError
 # None
 
 # Pip
-from anki.hooks import addHook
 from aqt import mw
 from aqt.utils import showInfo
 
-freq_dict = ""
+# Check os system
+os_name = os.uname().sysname
+
+if os_name == "Darwin":
+    freq_dict = "freq_dict/freq_dict.db"
+else:
+    freq_dict = "freq_dict\\freq_dict.db"
+
 note_type = ""
 vocab_input_field = ""
 destination_field = ""
@@ -57,7 +64,12 @@ def reload_json_config() -> None:
 
     # Json config file settings
     config = mw.addonManager.getConfig(__name__)
-    freq_dict = config["freq_dict"]
+
+    if config["freq_dict"]:
+        freq_dict = config["freq_dict"]
+    else:
+        freq_dict = freq_dict
+
     note_type = config["01_note_type"]
     vocab_input_field = config["02_vocab_input_field"]
     destination_field = config["03_frequency_output_field"]
@@ -181,7 +193,3 @@ def set_up_edit_menu(browser) -> None:
     menu.addSeparator()
     menu_item = menu.addAction(add_on_name)
     menu_item.triggered.connect(lambda _, brow=browser: on_bulk_generate_vocab(brow))
-
-
-if __name__ == "__main__":
-    addHook("browser.setupMenus", set_up_edit_menu)
