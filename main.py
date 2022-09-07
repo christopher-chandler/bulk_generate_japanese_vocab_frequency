@@ -12,7 +12,7 @@ both fields are specified by the user.
 """
 
 # Standard
-import os
+import platform
 import sqlite3
 from sqlite3 import OperationalError
 
@@ -24,7 +24,7 @@ from aqt import mw
 from aqt.utils import showInfo
 
 # Check os system
-os_name = os.uname().sysname
+os_name = platform.system()
 
 if os_name == "Darwin":
     freq_dict = "freq_dict/freq_dict.db"
