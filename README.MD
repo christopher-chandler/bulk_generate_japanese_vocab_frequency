@@ -143,17 +143,17 @@ then the frequency ranking of "14962" will be appended to the chosen destination
 # Example
 
 1) open the Anki-add on and insert the data into the necessary fields.
-![]( readme_img\config.png)
+![](readme_img/config.png)
 
 2) Go to the cards that correspond to the data you entered.
-![]( readme_img\card_type.png)
+![](readme_img/card_type.png)
 
 
 3) Highlight the cards that should have their frequency fields filled.
-![]( readme_img\insert_data.png)
+![](readme_img/insert_data.png)
 4) Then open the `Edit` menu in the browser menu and click on `Bulk Generate Japanese Frequency `
-![]( readme_img\start_message.png)
-![]( readme_img\data_entered.png)
+![](readme_img/start_message.png)
+![](readme_img/data_entered.png)
 
 <!-- ROADMAP -->
 ## Roadmap
