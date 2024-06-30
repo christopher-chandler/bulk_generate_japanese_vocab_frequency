@@ -137,8 +137,14 @@ then the frequency ranking of "14962" will be appended to the chosen destination
 * More info in Rikai-Sama Add-on or its frequency ranking can be found on 
 * his site at http://rikaisama.sourceforge.net/
 * You can also reference to the original project https://ankiweb.net/shared/info/1612642956
-<p align="right">(<a href="#top">back to top</a>)</p>
 
+### Vocab field format
+
+The following things will be ignored when querying the frequency of a vocab:
+
+* HTML tags (it is possible to color or format the vocab field)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 # Example
 
@@ -154,6 +160,9 @@ then the frequency ranking of "14962" will be appended to the chosen destination
 4) Then open the `Edit` menu in the browser menu and click on `Bulk Generate Japanese Frequency `
 ![](readme_img/start_message.png)
 ![](readme_img/data_entered.png)
+
+* Frequency from a colored vocab field
+![](readme_img/colored_vocab.png)
 
 <!-- ROADMAP -->
 ## Roadmap
