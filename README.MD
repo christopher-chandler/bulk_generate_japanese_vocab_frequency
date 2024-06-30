@@ -142,11 +142,13 @@ then the frequency ranking of "14962" will be appended to the chosen destination
 
 The following things will be ignored when querying the frequency of a vocab:
 
-* HTML tags (it is possible to color or format the vocab field)
+* HTML tags (it is possible to color or format the vocab field);
+* Parenthesis and their contents (e.g., kanji's wrong readings);
+* Leading/trailing whitespace.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-# Example
+## Example
 
 1) open the Anki-add on and insert the data into the necessary fields.
 ![](readme_img/config.png)
@@ -161,8 +163,9 @@ The following things will be ignored when querying the frequency of a vocab:
 ![](readme_img/start_message.png)
 ![](readme_img/data_entered.png)
 
-* Frequency from a colored vocab field
-![](readme_img/colored_vocab.png)
+* Case with a colored vocab field and extra information in parenthesis.
+  In this case the vocab term will be `方` only.
+![](readme_img/color_parenthesis_vocab.png)
 
 <!-- ROADMAP -->
 ## Roadmap

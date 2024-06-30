@@ -31,7 +31,8 @@ frequency_field = ""
 word_type_field = ""
 overwrite_destination_field = True
 
-re_xml_tag = re.compile(r"<.*?>")
+re_xml_tag = re.compile(r"<.*?>")  # HTML/XML tags
+re_parenthesis = re.compile(r"[(（].*[)）]")  # Handle JP parenthesis too
 
 
 def reload_json_config():
@@ -51,6 +52,33 @@ def reload_json_config():
     frequency_field = config["03_frequency_output_field"]
     word_type_field = config["03_word_type_output_field"]
     overwrite_destination_field = config["04_overwrite_destination_field"]
+
+
+def preprocess_field(content: str) -> str:
+    """
+    Performs the following operations on the given field content:
+    - Remove HTML/XML tags
+    - Remove parenthesis and their contents
+    - Replace non-breaking space with actual space
+    - Trim leading and trailing whitespace
+
+    :param content: The field's content to preprocess
+    :return: The vocab literal
+    """
+
+    # Replace non-breaking space
+    content = content.replace("&nbsp;", " ")
+
+    # Remove HTML/XML tags (just the tags, keep contents)
+    content = re_xml_tag.sub("", content)
+
+    # Remove parenthesis and their contents
+    content = re_parenthesis.sub("", content)
+
+    # Strip leading and trailing whitespace
+    content = content.strip()
+
+    return content
 
 
 def bulk_generate_vocab_frequency_fg(note_identifiers):
@@ -99,8 +127,8 @@ def bulk_generate_vocab_frequency_fg(note_identifiers):
             if i == 1:
                 showInfo("Frequency data added")
 
-            vocab_query = note[source]
-            vocab_query = re_xml_tag.sub("", vocab_query)  # Remove HTML/XML tags
+            vocab_query = preprocess_field(note[source])
+
             if vocab_query != "":
                 sql_query = f"""select freq from freq_dict 
                     where expression ='{vocab_query}';"""
@@ -170,8 +198,8 @@ def bulk_generate_word_type_fg(note_identifiers):
             if i == 1:
                 showInfo("Word type data added")
 
-            vocab_query = note[source]
-            vocab_query = re_xml_tag.sub("", vocab_query)  # Remove HTML/XML tags
+            vocab_query = preprocess_field(note[source])
+
             if vocab_query != "":
                 sql_query = f"""select Meaning from jmdict 
                     where expression='{vocab_query}';"""
