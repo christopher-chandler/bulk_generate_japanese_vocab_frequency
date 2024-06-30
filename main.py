@@ -11,6 +11,7 @@ Anki field.
 """
 
 # Standard
+import re
 import sqlite3
 from sqlite3 import OperationalError
 
@@ -29,6 +30,8 @@ vocab_input_field = ""
 frequency_field = ""
 word_type_field = ""
 overwrite_destination_field = True
+
+re_xml_tag = re.compile(r"<.*?>")
 
 
 def reload_json_config():
@@ -97,6 +100,7 @@ def bulk_generate_vocab_frequency_fg(note_identifiers):
                 showInfo("Frequency data added")
 
             vocab_query = note[source]
+            vocab_query = re_xml_tag.sub("", vocab_query)  # Remove HTML/XML tags
             if vocab_query != "":
                 sql_query = f"""select freq from freq_dict 
                     where expression ='{vocab_query}';"""
@@ -167,6 +171,7 @@ def bulk_generate_word_type_fg(note_identifiers):
                 showInfo("Word type data added")
 
             vocab_query = note[source]
+            vocab_query = re_xml_tag.sub("", vocab_query)  # Remove HTML/XML tags
             if vocab_query != "":
                 sql_query = f"""select Meaning from jmdict 
                     where expression='{vocab_query}';"""
