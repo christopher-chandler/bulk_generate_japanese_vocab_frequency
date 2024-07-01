@@ -93,6 +93,15 @@ You must set the variables of the  ```config.json```. These are necessary
 so that the dictionaries can be accessed. It is better to use absolute as opposed 
 to relative paths.
 
+The dictionaries needed for the word type data and frequency look-up are included 
+in this addon. They are stored in the folder of the anki addon: `Anki2/addons21/1004691625/databases`
+- freq_dict.db
+- jmdict.db
+- slice_of_life.db
+
+Should they not be included, they can also be downloaded from the github page 
+of this anki add on. 
+
 ```
 {
     "0_jm_dict": "",
