@@ -4,19 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa2f9866-9dc7-4471-b075-232a812febb6" name="Changes" comment="Reformat code&#10;Rename variable&#10;Add documentation">
-      <change afterPath="$PROJECT_DIR$/readme_img/blank_word_type.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readme_img/insert_frequency.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readme_img/insert_word_data.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readme_img/word_type_complete.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readme_img/word_type_data_added.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readme_img/word_type_pop_up_start.png" afterDir="false" />
+    <list default="true" id="aa2f9866-9dc7-4471-b075-232a812febb6" name="Changes" comment="add gitignore">
       <change beforePath="$PROJECT_DIR$/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.MD" beforeDir="false" afterPath="$PROJECT_DIR$/config.MD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databases/freq.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme_img/config.png" beforeDir="false" afterPath="$PROJECT_DIR$/readme_img/config.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme_img/insert_data.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +109,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1662054177943</updated>
-      <workItem from="1719811207568" duration="1397000" />
+      <workItem from="1719811207568" duration="2268000" />
     </task>
     <task id="LOCAL-00001" summary="Reformat code&#10;Rename variable&#10;Add documentation">
       <created>1662240050414</created>
@@ -136,7 +125,23 @@
       <option name="project" value="LOCAL" />
       <updated>1662241637890</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Update readme &#10;add new documentation&#10;add new images &#10;update config file and config me">
+      <option name="closed" value="true" />
+      <created>1719812632549</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1719812632549</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add gitignore">
+      <option name="closed" value="true" />
+      <created>1719812682122</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1719812682122</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,6 +160,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Reformat code&#10;Rename variable&#10;Add documentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reformat code&#10;Rename variable&#10;Add documentation" />
+    <MESSAGE value="Update readme &#10;add new documentation&#10;add new images &#10;update config file and config me" />
+    <MESSAGE value="add gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="add gitignore" />
   </component>
 </project>
