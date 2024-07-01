@@ -89,12 +89,14 @@ You can also install it via the files provided on Github.
 
 
 ### Prerequisites
-
-You must set the variables of the  ```config.json```
+You must set the variables of the  ```config.json```. These are necessary 
+so that the dictionaries can be accessed. It is better to use absolute as opposed 
+to relative paths.
 
 ```
 {
-    "freq_dict": "",
+    "0_jm_dict": "",
+    "0_freq_dict": "",
     "01_note_type": "Japanese",
     "02_vocab_input_field": "Target Word",
     "03_frequency_output_field": "Frequency Ranking",
@@ -102,13 +104,15 @@ You must set the variables of the  ```config.json```
 }
 ```
 
-* ```freq_dict```: The path of the frequency dictionary. 
+* ```0_freq_dict```: The path of the frequency dictionary; used to ascertain frequency data.
+* ```0_jm_dict```: The path of the japanese dictionary; used to ascertain word type data
 It is coupled with the add-on and is located in the project directory.
 You only need to copy the path of the standard dictionary or the one you provide.
-* ```01_note_type``` The name of the note type which contains the vocab for which the frequency rate should be determined.
-* ```02_vocab_input_field``` The field that contains the target word
-* ```"03_frequency_output_field"``` The field where frequency rating should be saved.
-* ```04_overwrite_destination_field``` Overwrite frequency value of the output filed (automatically set to true)
+* ```01_note_type```: The name of the note type which contains the vocab for which the frequency rate should be determined.
+* ```02_vocab_input_field```: The field that contains the target word
+* ```03_frequency_output_field```: The field where frequency rating should be saved.
+* ```04_overwrite_destination_field```: Overwrite frequency value of the output filed (automatically set to true)
+
 
 
 ### Installation
@@ -150,6 +154,7 @@ The following things will be ignored when querying the frequency of a vocab:
 
 ## Example
 
+#### Frequency Data
 1) open the Anki-add on and insert the data into the necessary fields.
 ![](readme_img/config.png)
 
@@ -158,15 +163,44 @@ The following things will be ignored when querying the frequency of a vocab:
 
 
 3) Highlight the cards that should have their frequency fields filled.
-![](readme_img/insert_data.png)
+![](readme_img/insert_frequency.png)
 4) Then open the `Edit` menu in the browser menu and click on `Bulk Generate Japanese Frequency `
 ![](readme_img/start_message.png)
 ![](readme_img/data_entered.png)
 
+If information for a word cannot be found, it will be filled with `UNK` for unknown.
+
+### Remove HTML
 * Case with a colored vocab field and extra information in parenthesis.
   In this case the vocab term will be `方` only.
 ![](readme_img/color_parenthesis_vocab.png)
 
+
+### Add Word Type Data 
+Using the function generate word type data, you can add data from
+the jmdict to a certain field. This can be understood as a dictionary function,
+but with a limited interface. To understand what the exact abbreviations mean, 
+it is best to consult the [jmdict site](https://www.edrdg.org/jmdict/jmdict_dtd_h.html)
+
+if you set the config file correctly, this should work as the previous function,
+but the output is different. 
+
+1) select the appropriate field  where the word type should be saved. In this case,
+the field is called `Word Type`.
+![](readme_img/blank_word_type.png)
+
+2) click on this field and a pop up and then select `Bulk Generate Word Type data`
+![](readme_img/insert_word_data.png)
+The following pop ups should appear:
+- ![word_type_pop_up_start.png](readme_img/word_type_pop_up_start.png)
+- ![word_type_complete.png](readme_img/word_type_complete.png)
+
+
+3) If you rexamine the field `Word Type`, you now see that it is filled with the 
+jmdict info:
+![word_type_data_added.png](readme_img/word_type_data_added.png)
+
+If information for a word cannot be found, it will be filled with `UNK` for unknown.
 <!-- ROADMAP -->
 ## Roadmap
 
@@ -177,7 +211,6 @@ See the [open issues](https://github.com/christopher-chandler/Bulk_Generate_Japa
 features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- CONTRIBUTING -->
