@@ -6,7 +6,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/christopher-chandler/Bulk_Generate_Japanese_Vocab_Frequency">
-    <img src="readme_img/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/christopher-chandler/bulk_generate_japanese_vocab_frequency/blob/main/readme_img/logo.png?raw=true" alt="Logo" width="80" height="80">
   </a>
 
 ![Version][Version-shield]  [![MIT License][license-shield]][license-url] ![update][update-shield]
@@ -60,7 +60,7 @@
 
 <div align="center">
   <a href="https://github.com/christopher-chandler/Bulk_Generate_Japanese_Vocab_Frequency">
-    <img src="readme_img/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/christopher-chandler/bulk_generate_japanese_vocab_frequency/blob/main/readme_img/logo.png?raw=true" alt="Logo" width="80" height="80">
   </a>
 </div>
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -123,8 +123,6 @@ There are two ways to install this add-on:
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- USAGE EXAMPLES -->
 ## Usage
 
@@ -156,26 +154,31 @@ The following things will be ignored when querying the frequency of a vocab:
 
 #### Frequency Data
 1) open the Anki-add on and insert the data into the necessary fields.
-![](readme_img/config.png)
 
-2) Go to the cards that correspond to the data you entered.
-![](readme_img/card_type.png)
+![](https://github.com/christopher-chandler/bulk_generate_japanese_vocab_frequency/blob/main/readme_img/config.png?raw=true)
+
+ 2) Go to the cards that correspond to the data you entered.
+
+![](https://github.com/christopher-chandler/bulk_generate_japanese_vocab_frequency/blob/main/readme_img/data_entered.png?raw=true)
 
 
 3) Highlight the cards that should have their frequency fields filled.
-![](readme_img/insert_frequency.png)
+
+![](https://github.com/christopher-chandler/bulk_generate_japanese_vocab_frequency/blob/main/readme_img/insert_frequency.png?raw=true)
+ 
 4) Then open the `Edit` menu in the browser menu and click on `Bulk Generate Japanese Frequency `
-![](readme_img/start_message.png)
-![](readme_img/data_entered.png)
+
+![](https://github.com/christopher-chandler/bulk_generate_japanese_vocab_frequency/blob/main/readme_img/data_entered.png?raw=true
+)
 
 If information for a word cannot be found, it will be filled with `UNK` for unknown.
 
 ### Remove HTML
 * Case with a colored vocab field and extra information in parenthesis.
   In this case the vocab term will be `方` only.
-![](readme_img/color_parenthesis_vocab.png)
+![](https://github.com/christopher-chandler/bulk_generate_japanese_vocab_frequency/blob/main/readme_img/color_parenthesis_vocab.png?raw=true)
 
-
+ 
 ### Add Word Type Data 
 Using the function generate word type data, you can add data from
 the jmdict to a certain field. This can be understood as a dictionary function,
@@ -187,19 +190,24 @@ but the output is different.
 
 1) select the appropriate field  where the word type should be saved. In this case,
 the field is called `Word Type`.
-![](readme_img/blank_word_type.png)
+![](https://github.com/christopher-chandler/bulk_generate_japanese_vocab_frequency/blob/main/readme_img/blank_word_type.png?raw=true)
+ 
+2) click on this field and a pop up and then select `Bulk Generate Word Type Data`
 
-2) click on this field and a pop up and then select `Bulk Generate Word Type data`
-![](readme_img/insert_word_data.png)
+![](https://github.com/christopher-chandler/bulk_generate_japanese_vocab_frequency/blob/main/readme_img/insert_word_data.png?raw=true
+)
+
 The following pop ups should appear:
-- ![word_type_pop_up_start.png](readme_img/word_type_pop_up_start.png)
-- ![word_type_complete.png](readme_img/word_type_complete.png)
+![](https://github.com/christopher-chandler/bulk_generate_japanese_vocab_frequency/blob/main/readme_img/word_type_pop_up_start.png?raw=true)
+![](https://github.com/christopher-chandler/bulk_generate_japanese_vocab_frequency/blob/main/readme_img/word_type_complete.png?raw=true)
+  
 
 
 3) If you rexamine the field `Word Type`, you now see that it is filled with the 
 jmdict info:
-![word_type_data_added.png](readme_img/word_type_data_added.png)
 
+![](https://github.com/christopher-chandler/bulk_generate_japanese_vocab_frequency/blob/main/readme_img/word_type_data_added.png?raw=true)
+ 
 If information for a word cannot be found, it will be filled with `UNK` for unknown.
 <!-- ROADMAP -->
 ## Roadmap
@@ -288,5 +296,5 @@ Project Link: [https://github.com/christopher-chandler/Bulk_Generate_Japanese_Vo
 
 [windows-shield]:  https://img.shields.io/badge/Windows-Tested-purple 
 [mac-shield]: https://img.shields.io/badge/Mac-Tested-purple
-[version-shield]: https://img.shields.io/badge/Version-1.0.0-brightgreen
-[update-shield]: https://img.shields.io/badge/Last_Updated-09_2022-blue
+[version-shield]: https://img.shields.io/badge/Version-1.0.1-brightgreen
+[update-shield]: https://img.shields.io/badge/Last_Updated-7_2024-blue
