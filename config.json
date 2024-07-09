@@ -4,5 +4,6 @@
     "01_note_type": "Japanese",
     "02_vocab_input_field": "Target Word",
     "03_frequency_output_field": "Frequency Ranking",
+    "03_word_type_output_field": "Word Type",
     "04_overwrite_destination_field": true
 }

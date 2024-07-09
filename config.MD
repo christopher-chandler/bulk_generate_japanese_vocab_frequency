@@ -5,5 +5,6 @@ You only need to copy the path of the standard dictionary or the one you provide
 * ```01_note_type```: The name of the note type which contains the vocab for which the frequency rate should be determined.
 * ```02_vocab_input_field```: The field that contains the target word
 * ```03_frequency_output_field```: The field where frequency rating should be saved.
+* ```03_word_type_output_field"```: The field where grammatical data about the word should be saved.
 * ```04_overwrite_destination_field```: Overwrite frequency value of the output filed (automatically set to true)
 
