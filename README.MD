@@ -312,5 +312,5 @@ Project Link: [https://github.com/christopher-chandler/Bulk_Generate_Japanese_Vo
 
 [windows-shield]:  https://img.shields.io/badge/Windows-Tested-purple 
 [mac-shield]: https://img.shields.io/badge/Mac-Tested-purple
-[version-shield]: https://img.shields.io/badge/Version-1.0.1-brightgreen
+[version-shield]: https://img.shields.io/badge/Version-1.0.2-brightgreen
 [update-shield]: https://img.shields.io/badge/Last_Updated-7_2024-blue
