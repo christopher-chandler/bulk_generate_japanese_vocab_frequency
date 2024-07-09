@@ -48,6 +48,7 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
+  <li><a href="#update">Update</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -221,8 +222,14 @@ If information for a word cannot be found, it will be filled with `UNK` for unkn
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Add Jmdict support
+- [x] Add Jmdict support
 
+
+## Updates 
+
+v1.0.2
+ - add function so that word type data can be added to a field alongside the frequency data
+- restructured the config file to include the new `03_word_type_output_field`
 
 See the [open issues](https://github.com/christopher-chandler/Bulk_Generate_Japanese_Vocab_Frequency/issues) for a full list of proposed 
 features (and known issues).
