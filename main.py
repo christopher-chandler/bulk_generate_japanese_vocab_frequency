@@ -3,7 +3,7 @@
 Created on 09/12/2014
 @author: Myxoma
 
-updated on 01/09/2022
+updated on 10/07/2022
 @author: christopherchandler
 
 This add-on inserts the frequency for a given Japanese word to a given
@@ -15,14 +15,15 @@ import re
 import sqlite3
 from sqlite3 import OperationalError
 
-# Custom
-# None
-
 # Pip
 from anki.hooks import addHook
-from aqt import mw
 from aqt.utils import showInfo
+from aqt.browser import Browser
 
+# Custom
+from .anki_main_menu_tool import *
+
+# Config fields
 freq_dict = ""
 vocab_dict = ""
 note_type = ""
@@ -31,6 +32,7 @@ frequency_field = ""
 word_type_field = ""
 overwrite_destination_field = True
 
+# Regex
 re_xml_tag = re.compile(r"<.*?>")  # HTML/XML tags
 re_parenthesis = re.compile(r"[(（].*[)）]")  # Handle JP parenthesis too
 
@@ -94,7 +96,7 @@ def bulk_generate_vocab_frequency_fg(note_identifiers):
         note_model = note.model()["name"]
 
         error_msg = {
-            1: f"Note type mismatch: {note_type}",
+            1: f"Note type mismatch: {note_type}. Please check your config file to set the correct note type.",
             2: f"Vocab field '{vocab_input_field}' not found!",
             3: f"Destination field '{frequency_field}' not found!",
             4: f"{vocab_input_field} is not empty. Skipping!",
@@ -125,7 +127,7 @@ def bulk_generate_vocab_frequency_fg(note_identifiers):
         try:
             i += 1
             if i == 1:
-                showInfo("Frequency data added")
+                showInfo("Frequency data added.")
 
             vocab_query = preprocess_field(note[source])
 
@@ -222,31 +224,39 @@ def bulk_generate_word_type_fg(note_identifiers):
     mw.progress.finish()
     mw.reset()
 
-
-def set_up_edit_menu(browser):
+def set_up_edit_menu(browser: Browser):
     menu = browser.form.menuEdit
-    menu.addSeparator()
-    bulk_generate_frequency = menu.addAction("Bulk Generate Vocab Frequency")
-    bulk_generate_frequency.triggered.connect(lambda _, brow=browser: on_bulk_generate_vocab(brow))
+    submenu = QMenu("Japanese Frequency & Word Type Analyzer", browser)
 
-    bulk_generate_word_type = menu.addAction("Bulk Generate Word Type Data")
+    # Create actions
+    bulk_generate_frequency = QAction("Bulk Generate Vocab Frequency", browser)
+    bulk_generate_word_type = QAction("Bulk Generate Word Type Data", browser)
+
+    # Connect actions to their handlers
+    bulk_generate_frequency.triggered.connect(lambda _, brow=browser: on_bulk_generate_vocab(brow))
     bulk_generate_word_type.triggered.connect(lambda _, brow=browser: on_generate_word_type(brow))
 
+    # Add actions to the submenu
+    submenu.addAction(bulk_generate_frequency)
+    submenu.addAction(bulk_generate_word_type)
 
-def on_bulk_generate_vocab(browser):
+    # Add submenu to the main edit menu
+    menu.addSeparator()  # Optional: Add a separator for visual clarity
+    menu.addMenu(submenu)
+
+def on_bulk_generate_vocab(browser: Browser):
     showInfo(f"Frequency: Beginning with the following config:\n\nNote type: {note_type}"
              f"\nVocab: {vocab_input_field}\nDestination field: {frequency_field}"
              f"\nOverwrite destination field: {overwrite_destination_field}")
     bulk_generate_vocab_frequency_fg(browser.selectedNotes())
 
-
-def on_generate_word_type(browser):
+def on_generate_word_type(browser: Browser):
     showInfo(f"Word Type: Beginning with the following config:\n\nNote type: {note_type}"
              f"\nVocab: {vocab_input_field}\nDestination field: {word_type_field}"
              f"\nOverwrite destination field: {overwrite_destination_field}")
     bulk_generate_word_type_fg(browser.selectedNotes())
 
-
+# Hook into the browser setup menus
 addHook("browser.setupMenus", set_up_edit_menu)
 
 if __name__ == "__main__":
