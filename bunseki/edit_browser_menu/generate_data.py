@@ -4,16 +4,18 @@ from sqlite3 import OperationalError
 
 # Pip
 from aqt import mw
-from aqt.utils import showInfo,showWarning
+from aqt.utils import showInfo, showWarning
 
 # Custom
 from .config import reload_json_config
 from .anki_fields import preprocess_field
-from ..settings.messages.custom_error_messages import (CustomErrorMessages as
-                                                       CuErMe,
-                                                       CustomErrorMessages)
+from ..settings.messages.custom_error_messages import (
+    CustomErrorMessages as CuErMe,
+    CustomErrorMessages,
+)
 
-from ..settings.logger.basic_logger import catch_and_log_info,catch_and_log_error
+from ..settings.logger.basic_logger import catch_and_log_info, catch_and_log_error
+
 # Reload the configuration data
 config_data = reload_json_config()
 
@@ -48,8 +50,7 @@ def check_all_note_types(note_identifiers) -> bool:
 
         elif VOCABULARY_INPUT_FIELD not in note:
             try:
-                raise CustomErrorMessages.VocabFieldNotFound(
-                    VOCABULARY_INPUT_FIELD)
+                raise CustomErrorMessages.VocabFieldNotFound(VOCABULARY_INPUT_FIELD)
             except CustomErrorMessages.VocabFieldNotFound as e:
                 showWarning(str(e))
                 catch_and_log_error(error=e, custom_message=e)
@@ -57,8 +58,7 @@ def check_all_note_types(note_identifiers) -> bool:
 
         elif FREQUENCY_FIELD not in note:
             try:
-                raise CustomErrorMessages.DestinationFieldNotFound(
-                    FREQUENCY_FIELD)
+                raise CustomErrorMessages.DestinationFieldNotFound(FREQUENCY_FIELD)
             except CustomErrorMessages.DestinationFieldNotFound as e:
                 showWarning(str(e))
                 catch_and_log_error(error=e, custom_message=e)
@@ -66,8 +66,7 @@ def check_all_note_types(note_identifiers) -> bool:
 
         elif note[FREQUENCY_FIELD] and not OVERWRITE_DESTINATION_FIELD:
             try:
-                raise CustomErrorMessages.VocabFieldNotEmpty(
-                    VOCABULARY_INPUT_FIELD)
+                raise CustomErrorMessages.VocabFieldNotEmpty(VOCABULARY_INPUT_FIELD)
             except CustomErrorMessages.VocabFieldNotEmpty as e:
                 showWarning(str(e))
                 catch_and_log_error(error=e, custom_message=e)
