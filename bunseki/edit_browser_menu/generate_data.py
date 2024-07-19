@@ -7,17 +7,16 @@ from aqt import mw
 from aqt.utils import showInfo, showWarning
 
 # Custom
-from .config import reload_json_config
+from ..addon_configs import load_json_config_data
 from .anki_fields import preprocess_field
 from ..settings.messages.custom_error_messages import (
     CustomErrorMessages as CuErMe,
-    CustomErrorMessages,
 )
 
 from ..settings.logger.basic_logger import catch_and_log_info, catch_and_log_error
 
 # Reload the configuration data
-config_data = reload_json_config()
+config_data = load_json_config_data()
 
 FREQUENCY_DICTIONARY = config_data.get("frequency_dict")
 VOCABULARY_DICTIONARY = config_data.get("vocabulary_dict")
@@ -42,32 +41,32 @@ def check_all_note_types(note_identifiers) -> bool:
 
         if NOTE_TYPE not in note_model_name:
             try:
-                raise CustomErrorMessages.NoteTypeMismatch(NOTE_TYPE)
-            except CustomErrorMessages.NoteTypeMismatch as e:
+                raise CuErMe.NoteTypeMismatch(NOTE_TYPE)
+            except CuErMe.NoteTypeMismatch as e:
                 showWarning(str(e))
                 catch_and_log_error(error=e, custom_message=e)
             return False
 
         elif VOCABULARY_INPUT_FIELD not in note:
             try:
-                raise CustomErrorMessages.VocabFieldNotFound(VOCABULARY_INPUT_FIELD)
-            except CustomErrorMessages.VocabFieldNotFound as e:
+                raise CuErMe.VocabFieldNotFound(VOCABULARY_INPUT_FIELD)
+            except CuErMe.VocabFieldNotFound as e:
                 showWarning(str(e))
                 catch_and_log_error(error=e, custom_message=e)
             return False
 
         elif FREQUENCY_FIELD not in note:
             try:
-                raise CustomErrorMessages.DestinationFieldNotFound(FREQUENCY_FIELD)
-            except CustomErrorMessages.DestinationFieldNotFound as e:
+                raise CuErMe.DestinationFieldNotFound(FREQUENCY_FIELD)
+            except CuErMe.DestinationFieldNotFound as e:
                 showWarning(str(e))
                 catch_and_log_error(error=e, custom_message=e)
             return False
 
         elif note[FREQUENCY_FIELD] and not OVERWRITE_DESTINATION_FIELD:
             try:
-                raise CustomErrorMessages.VocabFieldNotEmpty(VOCABULARY_INPUT_FIELD)
-            except CustomErrorMessages.VocabFieldNotEmpty as e:
+                raise CuErMe.VocabFieldNotEmpty(VOCABULARY_INPUT_FIELD)
+            except CuErMe.VocabFieldNotEmpty as e:
                 showWarning(str(e))
                 catch_and_log_error(error=e, custom_message=e)
             return False
@@ -75,7 +74,7 @@ def check_all_note_types(note_identifiers) -> bool:
     return True
 
 
-def bulk_generate_vocab_frequency(note_identifiers):
+def pull_data_from_dictionary(note_identifiers, dictionary_source: str):
     """
     Process the given note identifiers to add frequency data.
 
@@ -85,16 +84,17 @@ def bulk_generate_vocab_frequency(note_identifiers):
     :param note_identifiers: List of note identifiers to process.
     :return: None
     """
-    reload_json_config()
+    load_json_config_data()
     frequency_database = sqlite3.connect(FREQUENCY_DICTIONARY)
 
     i = 0
     total_notes = len(note_identifiers)
-
     all_true = check_all_note_types(note_identifiers)
 
     if all_true:
         mw.progress.start(label="Updating vocabulary frequency...", max=total_notes)
+
+        catch_and_log_info(custom_message="start generating vocabulary frequency...")
 
         for identifier in note_identifiers:
             note = mw.col.getNote(identifier)
@@ -107,19 +107,36 @@ def bulk_generate_vocab_frequency(note_identifiers):
                 vocab_query = preprocess_field(note[SOURCE])
 
                 if vocab_query != "":
-                    sql_query = f"""SELECT freq FROM freq_dict 
+                    # Look for word in the frequency dictionary
+                    sql_query_freq_dict = f"""SELECT freq FROM freq_dict 
                                     WHERE expression ='{vocab_query}';"""
+
+                    sql_query_jmdict = f"""select Meaning from jmdict 
+                                        where expression='{vocab_query}';"""
+
                     try:
+
+                        if dictionary_source == "freq_dict":
+                            sql_query = sql_query_freq_dict
+                        elif dictionary_source == "jmdict":
+                            sql_query = sql_query_jmdict
+                        else:
+                            sql_query = sql_query_freq_dict
+
                         cursor = frequency_database.cursor()
                         cursor.execute(sql_query)
                         single_result = cursor.fetchone()
+
                         if single_result is not None:
                             note[DESTINATION] = single_result[0]
                         else:
                             note[DESTINATION] = "UNK"
 
-                    except OperationalError:
-                        pass
+                    except OperationalError as e:
+                        catch_and_log_error(
+                            error=e,
+                            custom_message=f"There is a problem with the {FREQUENCY_DICTIONARY} database",
+                        )
             except:
                 raise
 
@@ -132,74 +149,3 @@ def bulk_generate_vocab_frequency(note_identifiers):
         showInfo(f"Processed {total_notes} notes.")
         frequency_database.close()
         mw.reset()
-
-
-def bulk_generate_word_type_fg(note_identifiers):
-
-    reload_json_config()
-    freq_db = sqlite3.connect(VOCABULARY_DICTIONARY)
-
-    i = 0
-
-    for identifier in note_identifiers:
-
-        note = mw.col.getNote(identifier)
-        note_model = note.model()["name"]
-
-        error_msg = {
-            1: f"Note type mismatch: {NOTE_TYPE}",
-            2: f"Vocab field '{VOCABULARY_INPUT_FIELD}' not found!",
-            3: f"Destination field '{WORD_TYPE_FIELD}' not found!",
-            4: f"{VOCABULARY_INPUT_FIELD} is not empty. Skipping!",
-        }
-
-        if NOTE_TYPE not in note_model:
-            showInfo(error_msg.get(1))
-            break
-
-        source = None
-        if VOCABULARY_INPUT_FIELD in note:
-            source = VOCABULARY_INPUT_FIELD
-        if not source:
-            showInfo(error_msg.get(2))
-            break
-
-        destination = None
-        if WORD_TYPE_FIELD in note:
-            destination = WORD_TYPE_FIELD
-        if not destination:
-            showInfo(error_msg.get(3))
-            break
-
-        if note[destination] and not OVERWRITE_DESTINATION_FIELD:
-            showInfo(error_msg.get(4))
-            break
-
-        try:
-            i += 1
-            if i == 1:
-                showInfo("Word type data added")
-
-            vocab_query = preprocess_field(note[source])
-
-            if vocab_query != "":
-                sql_query = f"""select Meaning from jmdict 
-                    where expression='{vocab_query}';"""
-                try:
-                    cursor = freq_db.cursor()
-                    cursor.execute(sql_query)
-                    single_result = cursor.fetchone()
-                    if single_result is not None:
-                        note[destination] = single_result[0]
-                    else:
-                        note[destination] = "UNK"
-
-                except OperationalError:
-                    pass
-        except:
-            raise
-
-        note.flush()
-    freq_db.close()
-    mw.progress.finish()
-    mw.reset()

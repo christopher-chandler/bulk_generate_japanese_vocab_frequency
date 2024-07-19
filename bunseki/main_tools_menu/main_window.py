@@ -10,6 +10,9 @@ from PyQt6.QtWidgets import QMainWindow
 from .about_add_on import Ui_MainWindow
 from ..settings.constants.constant_paths import GeneralPaths as Gp
 from ..settings.logger.basic_logger import catch_and_log_info
+from ..addon_configs import load_json_config_data
+
+debug = load_json_config_data().get("debug")
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):
@@ -45,7 +48,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             "/Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/log/bunseki.log_2024_07_19.log"
         ).read()
         self.addonLogTextBrowser_2.setText(text)
-        self.tabWidget.removeTab(2)
+
+        if debug == False:
+            self.tabWidget.removeTab(2)
 
     def close_about_window(self) -> None:
         """

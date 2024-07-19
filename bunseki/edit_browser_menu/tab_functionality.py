@@ -6,10 +6,10 @@ from aqt.utils import showInfo, askUser
 from aqt.browser import Browser
 
 # Custom
-from .config import reload_json_config
-from .generate_data import bulk_generate_word_type_fg, bulk_generate_vocab_frequency
+from ..addon_configs import load_json_config_data
+from .generate_data import pull_data_from_dictionary
 
-config_data = reload_json_config()
+config_data = load_json_config_data()
 
 FREQUENCY_DICTIONARY = config_data.get("frequency_dict")
 VOCABULARY_DICTIONARY = config_data.get("vocabulary_dict")
@@ -18,68 +18,55 @@ VOCABULARY_INPUT_FIELD = config_data.get("vocabulary_input_field")
 FREQUENCY_FIELD = config_data.get("frequency_field")
 WORD_TYPE_FIELD = config_data.get("word_type_field")
 OVERWRITE_DESTINATION_FIELD = True
+DISABLE_WARNINGS = config_data.get("disable_warnings")
 
 
-def on_bulk_generate_vocab(browser: Browser) -> None:
+def generate_information_for_selected_cards(
+    browser: Browser, info_title: str, data_generation_type: str, dictionary_source: str
+) -> None:
+    """Generates information about the selected cards for data insertion.
+
+    This function displays a dialog box showing the configuration that will be used
+    to insert data of the specified type for the selected Anki notes. It also checks
+    if a large number of notes are selected and displays a warning message to the user
+    if enabled.
+
+    Args:
+        browser: The Anki browser object.
+        info_title: The title of the information dialog box.
+        data_generation_type: The type of data to be generated (e.g., frequency).
+        func_type: The type of function to be used for data generation.
+
+    Returns:
+        None
+    """
     len_notes = len(browser.selectedNotes())
 
     showInfo(
-        title="Bulk Generate Frequency",
+        title=info_title,
         text=f"The following configuration will be used for inserting the "
-        f"frequency data for {len_notes} note(s):"
+        f"{data_generation_type} for {len_notes} note(s):"
         f"\n\nNote type: {NOTE_TYPE}"
         f"\nVocab: {VOCABULARY_INPUT_FIELD}"
         f"\nDestination field: {FREQUENCY_FIELD}"
         f"\nOverwrite destination field: {OVERWRITE_DESTINATION_FIELD}",
     )
 
-    if len_notes > 200:
+    if len_notes > 200 and DISABLE_WARNINGS is False:
         proceed = askUser(
             title="Multiple Cards Selected",
             text="You have selected a large amount of notes. "
-            "Depending on your system, this could cause your Anki "
-            "instance to crash. "
+            "Depending on your computer configurations, this could cause your "
+            "Anki"
+            "instance to crash or it might take a while for all of the "
+            "necessary data to load."
             "Would you like to proceed anyway?",
         )
 
         if proceed:
-            bulk_generate_vocab_frequency(browser.selectedNotes())
+
+            pull_data_from_dictionary(browser.selectedNotes(), dictionary_source)
         else:
             showInfo(title="No Card", text="No cards were processsed.")
     else:
-        bulk_generate_vocab_frequency(browser.selectedNotes())
-
-
-def on_generate_word_type(browser: Browser):
-    len_notes = len(browser.selectedNotes())
-
-    showInfo(
-        title="Word Type",
-        text=f"The following configuration will be used for inserting the "
-        f"word type data for {len_notes} note(s):"
-        f"\n\nNote type: {NOTE_TYPE}"
-        f"\nVocab: {VOCABULARY_INPUT_FIELD}"
-        f"\nDestination field: {FREQUENCY_FIELD}"
-        f"\nOverwrite destination field: {OVERWRITE_DESTINATION_FIELD}",
-    )
-
-    if len_notes > 200:
-        proceed = askUser(
-            title="Multiple Cards Selected",
-            text="You have selected a large amount of notes. "
-            "Depending on your computer configures, this could cause your Anki "
-            "instance to crash. "
-            "Would you like to proceed anyway?",
-        )
-
-        if proceed:
-            bulk_generate_word_type_fg(browser.selectedNotes())
-        else:
-            showInfo(title="No Card", text="No cards were processsed.")
-    else:
-
-        bulk_generate_word_type_fg(browser.selectedNotes())
-
-
-def generate_information_for_selected_cards():
-    pass
+        pull_data_from_dictionary(browser.selectedNotes(), dictionary_source)

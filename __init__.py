@@ -6,7 +6,7 @@
 # License: GNU AGPLv3 <https://www.gnu.org/licenses/agpl.html>
 
 # Standard
-# None
+import os
 
 # Pip
 from anki.hooks import addHook
@@ -14,6 +14,7 @@ from anki.hooks import addHook
 # Custom
 from .bunseki.settings.logger.basic_logger import catch_and_log_info
 from . import main
+from .bunseki.settings.constants.constant_paths import GeneralPaths
 
 
 catch_and_log_info(custom_message="Add was on successfully  started")

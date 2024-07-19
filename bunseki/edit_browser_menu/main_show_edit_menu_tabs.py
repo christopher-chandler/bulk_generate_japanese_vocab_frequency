@@ -7,7 +7,9 @@ from aqt.browser import Browser
 from anki.hooks import addHook
 
 # Custom
-from .tab_functionality import on_generate_word_type, on_bulk_generate_vocab
+from .tab_functionality import (
+    generate_information_for_selected_cards,
+)
 
 
 def set_up_edit_menu(browser: Browser) -> None:
@@ -34,10 +36,20 @@ def set_up_edit_menu(browser: Browser) -> None:
 
     # Connect actions to their handlers
     bulk_generate_frequency.triggered.connect(
-        lambda _, brow=browser: on_bulk_generate_vocab(brow)
+        lambda _, brow=browser: generate_information_for_selected_cards(
+            browser=brow,
+            info_title="Frequency",
+            data_generation_type="frequency",
+            dictionary_source="freq_dict",
+        )
     )
     bulk_generate_word_type.triggered.connect(
-        lambda _, brow=browser: on_generate_word_type(brow)
+        lambda _, brow=browser: generate_information_for_selected_cards(
+            browser=brow,
+            info_title="Word Type",
+            data_generation_type="word type",
+            dictionary_source="jmdict",
+        )
     )
 
     # Add actions to the submenu
