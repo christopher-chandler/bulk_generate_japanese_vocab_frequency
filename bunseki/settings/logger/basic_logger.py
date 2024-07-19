@@ -4,11 +4,13 @@ import traceback
 import inspect
 
 # Pip
-
+# None
 
 # Custom
 from ..constants.constant_vars import SIMPLE_TIMESTAMP
 from ..constants.constant_paths import GeneralPaths as Gp
+
+log_file_name = f"{Gp.LOG_FILE.value}_{SIMPLE_TIMESTAMP}.log"
 
 
 def get_logger(log_level=logging.ERROR) -> logging.Logger:
@@ -55,7 +57,7 @@ def get_logger(log_level=logging.ERROR) -> logging.Logger:
     }
 
     logging.basicConfig(
-        filename=f"{Gp.LOG_FILE.value}_{SIMPLE_TIMESTAMP}.log",
+        filename=log_file_name,
         level=log_level,
         format=logger_formats.get(log_level),
     )
