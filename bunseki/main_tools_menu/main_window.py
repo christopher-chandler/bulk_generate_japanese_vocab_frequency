@@ -33,15 +33,19 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         # Connect the close button to its handler
         self.closeWindow.clicked.connect(self.close_about_window)
-        self.label.setPixmap(QtGui.QPixmap(Gp.IMAGES.value + "github.png"))
+        self.githubLabel.setPixmap(QtGui.QPixmap(Gp.IMAGES.value + "github.png"))
 
         # ToolTips
-        self.label.setToolTip(
-            _translate("Dialog", "Sets the display mode of the calendar")
-        )
+        self.githubLabel.setToolTip(_translate("Dialog", "opens the github webpage"))
 
         # Assign the openLink method to the QLabel's mousePressEvent
-        self.ThumbsUpLikeAddOn.mousePressEvent = self.open_anki_like_page
+        self.thumbsUpLikeAddOn.mousePressEvent = self.open_anki_like_page
+
+        text = open(
+            "/Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/log/bunseki.log_2024_07_19.log"
+        ).read()
+        self.addonLogTextBrowser_2.setText(text)
+        self.tabWidget.removeTab(2)
 
     def close_about_window(self) -> None:
         """

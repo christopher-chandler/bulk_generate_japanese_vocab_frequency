@@ -4,28 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa2f9866-9dc7-4471-b075-232a812febb6" name="Changes" comment="add scripts for building add ons">
-      <change afterPath="$PROJECT_DIR$/bunseki/add_on_update_info/dialog.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bunseki/add_on_update_info/pop_up.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bunseki/edit_browser_menu/anki_fields.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bunseki/edit_browser_menu/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bunseki/edit_browser_menu/generate_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bunseki/edit_browser_menu/main_show_edit_menu_tabs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bunseki/edit_browser_menu/tab_functionality.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bunseki/main_tools_menu/anki_main_menu_tool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bunseki/main_tools_menu/main_window.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bunseki/settings/constants/constant_paths.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bunseki/settings/constants/constant_vars.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bunseki/settings/logger/basic_logger.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bunseki/settings/messages/custom_error_messages.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bunseki/settings/messages/message_keys.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deprecate/main_2.py" afterDir="false" />
+    <list default="true" id="aa2f9866-9dc7-4471-b075-232a812febb6" name="Changes" comment="deprecate old code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anki_main_menu_tool.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bunseki/add_on_update_info/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/deprecate/add_on_update_info/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bunseki/add_on_update_info/dialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/deprecate/add_on_update_info/dialog.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bunseki/add_on_update_info/main_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/deprecate/add_on_update_info/main_window.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bunseki/add_on_update_info/pop_up.py" beforeDir="false" afterPath="$PROJECT_DIR$/deprecate/add_on_update_info/pop_up.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bunseki/main_tools_menu/about_add_on.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bunseki/main_tools_menu/main_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/bunseki/main_tools_menu/main_window.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/bunseki.log_2024_07_19.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/bunseki.log_2024_07_19.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/word_type.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/gui/about_add_on.ui" beforeDir="false" afterPath="$PROJECT_DIR$/resources/gui/about_add_on.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/gui/rebuilt_about_add_on.sh" beforeDir="false" afterPath="$PROJECT_DIR$/resources/gui/rebuilt_about_add_on.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/gui/update_info.ui" beforeDir="false" afterPath="$PROJECT_DIR$/deprecate/update_info.ui" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,14 +87,14 @@
       <recent name="$PROJECT_DIR$/bunseki/pyqt6_ui_py/main_tools_menu/ui" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/deprecate" />
       <recent name="$PROJECT_DIR$/bunseki/update_info_ui" />
       <recent name="$PROJECT_DIR$/resources/gui" />
-      <recent name="$PROJECT_DIR$/deprecate" />
       <recent name="$PROJECT_DIR$/resources" />
       <recent name="$PROJECT_DIR$/bunseki" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.update">
+  <component name="RunManager" selected="Shell Script.rebuilt_about_add_on.sh">
     <configuration name="config" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bulk_generate_japanese_vocab_frequency" />
       <option name="ENV_FILES" value="" />
@@ -173,29 +164,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main_window (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="bulk_generate_japanese_vocab_frequency" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bunseki/view/main_tools_menu" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bunseki/view/main_tools_menu/main_window.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="update" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bulk_generate_japanese_vocab_frequency" />
       <option name="ENV_FILES" value="" />
@@ -219,20 +187,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="rebuilt_about_add_on.sh" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/resources/gui/build_about_add_on.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/resources/gui" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/zsh" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.update" />
       <item itemvalue="Python.config" />
       <item itemvalue="Python.constant_paths" />
       <item itemvalue="Python.generate_data" />
-      <item itemvalue="Python.main_window (1)" />
+      <item itemvalue="Shell Script.rebuilt_about_add_on.sh" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Shell Script.rebuilt_about_add_on.sh" />
         <item itemvalue="Python.update" />
         <item itemvalue="Python.generate_data" />
         <item itemvalue="Python.config" />
         <item itemvalue="Python.constant_paths" />
-        <item itemvalue="Python.main_window (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -272,7 +255,8 @@
       <workItem from="1721281114026" duration="7551000" />
       <workItem from="1721299144829" duration="4665000" />
       <workItem from="1721304773889" duration="642000" />
-      <workItem from="1721311346507" duration="19833000" />
+      <workItem from="1721311346507" duration="22688000" />
+      <workItem from="1721385235357" duration="3412000" />
     </task>
     <task id="LOCAL-00001" summary="Reformat code&#10;Rename variable&#10;Add documentation">
       <created>1662240050414</created>
@@ -360,7 +344,95 @@
       <option name="project" value="LOCAL" />
       <updated>1721377344634</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="dialog for showing updated info about add on.">
+      <option name="closed" value="true" />
+      <created>1721377392121</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1721377392121</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add scripts for processing word and frequency data.">
+      <option name="closed" value="true" />
+      <created>1721377426535</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1721377426535</updated>
+    </task>
+    <task id="LOCAL-00014" summary="add scripts for main menu tab.">
+      <option name="closed" value="true" />
+      <created>1721377452065</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1721377452065</updated>
+    </task>
+    <task id="LOCAL-00015" summary="add settings directory&#10;add settings script">
+      <option name="closed" value="true" />
+      <created>1721377466047</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1721377466047</updated>
+    </task>
+    <task id="LOCAL-00016" summary="deprecate code">
+      <option name="closed" value="true" />
+      <created>1721377493035</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1721377493035</updated>
+    </task>
+    <task id="LOCAL-00017" summary="remove src">
+      <option name="closed" value="true" />
+      <created>1721377507985</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1721377507985</updated>
+    </task>
+    <task id="LOCAL-00018" summary="update main&#10;update main init">
+      <option name="closed" value="true" />
+      <created>1721377528037</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1721377528037</updated>
+    </task>
+    <task id="LOCAL-00019" summary="add ui scripts for main menu tools and add on update info">
+      <option name="closed" value="true" />
+      <created>1721377550618</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1721377550618</updated>
+    </task>
+    <task id="LOCAL-00020" summary="house cleaning">
+      <option name="closed" value="true" />
+      <created>1721377573575</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1721377573575</updated>
+    </task>
+    <task id="LOCAL-00021" summary="black .">
+      <option name="closed" value="true" />
+      <created>1721377586235</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1721377586235</updated>
+    </task>
+    <task id="LOCAL-00022" summary="deprecate old code">
+      <option name="closed" value="true" />
+      <created>1721387096056</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1721387096056</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,7 +460,18 @@
     <MESSAGE value="update config files" />
     <MESSAGE value="add new python directories&#10;rename source to bunseki" />
     <MESSAGE value="add scripts for building add ons" />
-    <option name="LAST_COMMIT_MESSAGE" value="add scripts for building add ons" />
+    <MESSAGE value="dialog for showing updated info about add on." />
+    <MESSAGE value="add scripts for processing word and frequency data." />
+    <MESSAGE value="add scripts for main menu tab." />
+    <MESSAGE value="add settings directory&#10;add settings script" />
+    <MESSAGE value="deprecate code" />
+    <MESSAGE value="remove src" />
+    <MESSAGE value="update main&#10;update main init" />
+    <MESSAGE value="add ui scripts for main menu tools and add on update info" />
+    <MESSAGE value="house cleaning" />
+    <MESSAGE value="black ." />
+    <MESSAGE value="deprecate old code" />
+    <option name="LAST_COMMIT_MESSAGE" value="deprecate old code" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/1004691625$ui_main_window.coverage" NAME="ui_main_window Coverage Results" MODIFIED="1720760811890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bunseki/pyqt6_ui_py/main_tools_menu" />

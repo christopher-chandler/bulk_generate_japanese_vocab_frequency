@@ -20,10 +20,7 @@ Anki field.
 from .bunseki.main_tools_menu.anki_main_menu_tool import show_about_add_on
 from .bunseki.edit_browser_menu.main_show_edit_menu_tabs import show_edit_menu
 from anki.hooks import addHook
-from .bunseki.add_on_update_info.pop_up import show_update_message
 
-# Connect the function to Anki's profile loaded signal
-# addHook("profileLoaded", show_update_message)
 
 show_about_add_on()
 show_edit_menu()
