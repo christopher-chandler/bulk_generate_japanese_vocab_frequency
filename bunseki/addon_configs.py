@@ -15,9 +15,11 @@ VOCABULARY_INPUT_FIELD = ""
 FREQUENCY_FIELD = ""
 WORD_TYPE_FIELD = ""
 OVERWRITE_DESTINATION_FIELD = True
+DEBUG = True
+DISABLE_WARNINGS = False
 
 
-def reload_json_config() -> dict:
+def load_json_config_data() -> dict:
     """
     Reload the configuration settings from the Anki add-on manager.
 
@@ -26,9 +28,7 @@ def reload_json_config() -> dict:
     updated configuration field data.
 
     :return:
-        config_field_data(dict): A dictionary containing the configuration field data with keys:
-              'vocabulary_dict', 'frequency_dict', 'note_type', 'vocabulary_input_field',
-              'frequency_field', 'word_type_field', 'overwrite_destination'.
+        config_field_data(dict): A dictionary containing the configuration field
     """
     # Global, so that the values can be overwritten
     global FREQUENCY_DICTIONARY
@@ -38,6 +38,8 @@ def reload_json_config() -> dict:
     global FREQUENCY_FIELD
     global WORD_TYPE_FIELD
     global OVERWRITE_DESTINATION_FIELD
+    global DEBUG
+    global DISABLE_WARNINGS
 
     # Fetch data from the config file
     config = mw.addonManager.getConfig(__name__)
@@ -48,6 +50,8 @@ def reload_json_config() -> dict:
     FREQUENCY_FIELD = config["03_frequency_output_field"]
     WORD_TYPE_FIELD = config["03_word_type_output_field"]
     OVERWRITE_DESTINATION_FIELD = config["04_overwrite_destination_field"]
+    DEBUG = config["05_debug"]
+    DISABLE_WARNINGS = config["06_disable_warnings"]
 
     # The new values inputted by the user
     config_field_data = {
@@ -58,6 +62,8 @@ def reload_json_config() -> dict:
         "frequency_field": FREQUENCY_FIELD,
         "word_type_field": WORD_TYPE_FIELD,
         "overwrite_destination": OVERWRITE_DESTINATION_FIELD,
+        "debug": DEBUG,
+        "disable_warnings": DISABLE_WARNINGS,
     }
 
     return config_field_data
