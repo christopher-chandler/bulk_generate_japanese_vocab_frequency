@@ -1,9 +1,11 @@
 {
-    "0_jm_dict": "",
-    "0_freq_dict": "",
     "01_note_type": "Japanese",
     "02_vocab_input_field": "Target Word",
     "03_frequency_output_field": "Frequency Ranking",
     "03_word_type_output_field": "Word Type",
-    "04_overwrite_destination_field": true
+    "04_overwrite_destination_field": true,
+    "05_debug": true,
+    "06_disable_warnings": false,
+    "0_jm_dict": "",
+    "0_freq_dict": ""
 }
