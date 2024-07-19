@@ -1,0 +1,1 @@
+pyuic6 about_add_on.ui -o  about_add_on.py
