@@ -19,7 +19,7 @@ from ..settings.logger.basic_logger import catch_and_log_info, catch_and_log_err
 config_data = load_json_config_data()
 
 FREQUENCY_DICTIONARY = config_data.get("frequency_dict")
-VOCABULARY_DICTIONARY = config_data.get("vocabulary_dict")
+JMDICT = config_data.get("jmdict")
 NOTE_TYPE = config_data.get("note_type")
 VOCABULARY_INPUT_FIELD = config_data.get("vocabulary_input_field")
 FREQUENCY_FIELD = config_data.get("frequency_field")
@@ -85,7 +85,9 @@ def pull_data_from_dictionary(note_identifiers, dictionary_source: str):
     :return: None
     """
     load_json_config_data()
-    frequency_database = sqlite3.connect(FREQUENCY_DICTIONARY)
+    d = {"freq_dict": FREQUENCY_DICTIONARY, "jmdict": JMDICT}
+
+    frequency_database = sqlite3.connect(d.get(dictionary_source))
 
     i = 0
     total_notes = len(note_identifiers)
@@ -95,11 +97,13 @@ def pull_data_from_dictionary(note_identifiers, dictionary_source: str):
         mw.progress.start(label="Updating vocabulary frequency...", max=total_notes)
 
         catch_and_log_info(custom_message="start generating vocabulary frequency...")
+        SOURCE = VOCABULARY_INPUT_FIELD
+
+        destination = {"freq_dict": FREQUENCY_FIELD, "jmdict": WORD_TYPE_FIELD}
+        DESTINATION = destination.get(dictionary_source)
 
         for identifier in note_identifiers:
             note = mw.col.getNote(identifier)
-            SOURCE = VOCABULARY_INPUT_FIELD
-            DESTINATION = FREQUENCY_FIELD
 
             try:
                 i += 1
@@ -114,17 +118,15 @@ def pull_data_from_dictionary(note_identifiers, dictionary_source: str):
                     sql_query_jmdict = f"""select Meaning from jmdict 
                                         where expression='{vocab_query}';"""
 
+                    query_dict = {
+                        "freq_dict": sql_query_freq_dict,
+                        "jmdict": sql_query_jmdict,
+                    }
+
                     try:
 
-                        if dictionary_source == "freq_dict":
-                            sql_query = sql_query_freq_dict
-                        elif dictionary_source == "jmdict":
-                            sql_query = sql_query_jmdict
-                        else:
-                            sql_query = sql_query_freq_dict
-
                         cursor = frequency_database.cursor()
-                        cursor.execute(sql_query)
+                        cursor.execute(query_dict.get(dictionary_source))
                         single_result = cursor.fetchone()
 
                         if single_result is not None:
@@ -133,12 +135,16 @@ def pull_data_from_dictionary(note_identifiers, dictionary_source: str):
                             note[DESTINATION] = "UNK"
 
                     except OperationalError as e:
+
                         catch_and_log_error(
                             error=e,
-                            custom_message=f"There is a problem with the {FREQUENCY_DICTIONARY} database",
+                            custom_message=f"There is a problem with the database",
                         )
-            except:
-                raise
+            except Exception as e:
+                catch_and_log_error(
+                    error=e,
+                    custom_message=f"There is a problem with the database",
+                )
 
             note.flush()
 

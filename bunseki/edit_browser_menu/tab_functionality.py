@@ -12,7 +12,7 @@ from .generate_data import pull_data_from_dictionary
 config_data = load_json_config_data()
 
 FREQUENCY_DICTIONARY = config_data.get("frequency_dict")
-VOCABULARY_DICTIONARY = config_data.get("vocabulary_dict")
+JMDICT = config_data.get("jmdict")
 NOTE_TYPE = config_data.get("note_type")
 VOCABULARY_INPUT_FIELD = config_data.get("vocabulary_input_field")
 FREQUENCY_FIELD = config_data.get("frequency_field")
@@ -42,13 +42,16 @@ def generate_information_for_selected_cards(
     """
     len_notes = len(browser.selectedNotes())
 
+    destination = {"freq_dict": FREQUENCY_FIELD, "jmdict": WORD_TYPE_FIELD}
+    DESTINATION = destination.get(dictionary_source)
+
     showInfo(
         title=info_title,
         text=f"The following configuration will be used for inserting the "
         f"{data_generation_type} for {len_notes} note(s):"
         f"\n\nNote type: {NOTE_TYPE}"
         f"\nVocab: {VOCABULARY_INPUT_FIELD}"
-        f"\nDestination field: {FREQUENCY_FIELD}"
+        f"\nDestination field: {DESTINATION}"
         f"\nOverwrite destination field: {OVERWRITE_DESTINATION_FIELD}",
     )
 
