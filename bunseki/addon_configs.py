@@ -9,7 +9,7 @@ from aqt import mw
 
 # Base values are empty
 FREQUENCY_DICTIONARY = ""
-VOCABULARY_DICTIONARY = ""
+JMDICT = ""
 NOTE_TYPE = ""
 VOCABULARY_INPUT_FIELD = ""
 FREQUENCY_FIELD = ""
@@ -32,7 +32,7 @@ def load_json_config_data() -> dict:
     """
     # Global, so that the values can be overwritten
     global FREQUENCY_DICTIONARY
-    global VOCABULARY_DICTIONARY
+    global JMDICT
     global NOTE_TYPE
     global VOCABULARY_INPUT_FIELD
     global FREQUENCY_FIELD
@@ -43,7 +43,7 @@ def load_json_config_data() -> dict:
 
     # Fetch data from the config file
     config = mw.addonManager.getConfig(__name__)
-    VOCABULARY_DICTIONARY = config["0_jm_dict"]
+    JMDICT = config["0_jm_dict"]
     FREQUENCY_DICTIONARY = config["0_freq_dict"]
     NOTE_TYPE = config["01_note_type"]
     VOCABULARY_INPUT_FIELD = config["02_vocab_input_field"]
@@ -55,8 +55,8 @@ def load_json_config_data() -> dict:
 
     # The new values inputted by the user
     config_field_data = {
-        "vocabulary_dict": VOCABULARY_DICTIONARY,
-        "frequency_dict": FREQUENCY_DICTIONARY,
+        "jmdict": JMDICT,
+        "freq_dict": FREQUENCY_DICTIONARY,
         "note_type": NOTE_TYPE,
         "vocabulary_input_field": VOCABULARY_INPUT_FIELD,
         "frequency_field": FREQUENCY_FIELD,
