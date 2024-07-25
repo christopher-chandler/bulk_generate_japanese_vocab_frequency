@@ -14,8 +14,6 @@ from anki.hooks import addHook
 # Custom
 from .bunseki.settings.logger.basic_logger import catch_and_log_info
 from . import main
-from .bunseki.settings.constants.constant_paths import GeneralPaths
-
 
 catch_and_log_info(custom_message="Add was on successfully  started")
 # addHook("browser.setupMenus", main.set_up_edit_menu)

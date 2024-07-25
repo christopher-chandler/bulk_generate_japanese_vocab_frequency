@@ -1,0 +1,447 @@
+ Timestamp: 2024-07-20 09:05:32,715
+Logger Name: root
+Log Level: INFO
+Message: Add was on successfully  started
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/__init__.py
+
+Timestamp: 2024-07-20 09:05:42,906
+Logger Name: root
+Log Level: INFO
+Message: start generating vocabulary frequency...
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/edit_browser_menu/generate_data.py
+
+Timestamp: 2024-07-20 09:05:42,910
+Logger Name: root
+Log Level: ERROR
+Message: no such table: jmdict
+Module: basic_logger
+Traceback: Traceback (most recent call last):
+  File "/Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/edit_browser_menu/generate_data.py", line 131, in pull_data_from_dictionary
+    cursor.execute(sql_query)
+sqlite3.OperationalError: no such table: jmdict
+
+Function: catch_and_log_error
+Line: 107
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/edit_browser_menu/generate_data.py
+
+Timestamp: 2024-07-20 09:10:42,058
+Logger Name: root
+Log Level: INFO
+Message: Add was on successfully  started
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/__init__.py
+
+Timestamp: 2024-07-20 09:10:51,119
+Logger Name: root
+Log Level: INFO
+Message: start generating vocabulary frequency...
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/edit_browser_menu/generate_data.py
+
+Timestamp: 2024-07-20 09:10:51,123
+Logger Name: root
+Log Level: ERROR
+Message: no such table: jmdict
+Module: basic_logger
+Traceback: Traceback (most recent call last):
+  File "/Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/edit_browser_menu/generate_data.py", line 128, in pull_data_from_dictionary
+    cursor.execute(query_dict.get(dictionary_source))
+sqlite3.OperationalError: no such table: jmdict
+
+Function: catch_and_log_error
+Line: 107
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/edit_browser_menu/generate_data.py
+
+Timestamp: 2024-07-20 09:11:05,824
+Logger Name: root
+Log Level: INFO
+Message: start generating vocabulary frequency...
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/edit_browser_menu/generate_data.py
+
+Timestamp: 2024-07-20 09:11:05,829
+Logger Name: root
+Log Level: ERROR
+Message: no such table: jmdict
+Module: basic_logger
+Traceback: Traceback (most recent call last):
+  File "/Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/edit_browser_menu/generate_data.py", line 128, in pull_data_from_dictionary
+    cursor.execute(query_dict.get(dictionary_source))
+sqlite3.OperationalError: no such table: jmdict
+
+Function: catch_and_log_error
+Line: 107
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/edit_browser_menu/generate_data.py
+
+Timestamp: 2024-07-20 09:11:50,186
+Logger Name: root
+Log Level: INFO
+Message: start generating vocabulary frequency...
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/edit_browser_menu/generate_data.py
+
+Timestamp: 2024-07-20 09:11:50,190
+Logger Name: root
+Log Level: ERROR
+Message: no such table: jmdict
+Module: basic_logger
+Traceback: Traceback (most recent call last):
+  File "/Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/edit_browser_menu/generate_data.py", line 128, in pull_data_from_dictionary
+    try:
+sqlite3.OperationalError: no such table: jmdict
+
+Function: catch_and_log_error
+Line: 107
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/edit_browser_menu/generate_data.py
+
+Timestamp: 2024-07-20 09:12:51,138
+Logger Name: root
+Log Level: INFO
+Message: Add was on successfully  started
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/__init__.py
+
+Timestamp: 2024-07-20 09:13:06,252
+Logger Name: root
+Log Level: INFO
+Message: start generating vocabulary frequency...
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/edit_browser_menu/generate_data.py
+
+Timestamp: 2024-07-20 09:14:13,650
+Logger Name: root
+Log Level: INFO
+Message: Add was on successfully  started
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/__init__.py
+
+Timestamp: 2024-07-20 09:14:23,796
+Logger Name: root
+Log Level: INFO
+Message: start generating vocabulary frequency...
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/edit_browser_menu/generate_data.py
+
+Timestamp: 2024-07-20 09:14:23,800
+Logger Name: root
+Log Level: ERROR
+Message: no such table: jmdict
+Module: basic_logger
+Traceback: Traceback (most recent call last):
+  File "/Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/edit_browser_menu/generate_data.py", line 129, in pull_data_from_dictionary
+    cursor.execute(query_dict.get(dictionary_source))
+sqlite3.OperationalError: no such table: jmdict
+
+Function: catch_and_log_error
+Line: 107
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/edit_browser_menu/generate_data.py
+
+Timestamp: 2024-07-20 15:28:50,903
+Logger Name: root
+Log Level: INFO
+Message: Add was on successfully  started
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/__init__.py
+
+Timestamp: 2024-07-20 15:29:00,651
+Logger Name: root
+Log Level: INFO
+Message: start generating vocabulary frequency...
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/edit_browser_menu/generate_data.py
+
+Timestamp: 2024-07-20 15:29:38,541
+Logger Name: root
+Log Level: INFO
+Message: Add was on successfully  started
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/__init__.py
+
+Timestamp: 2024-07-20 15:29:46,111
+Logger Name: root
+Log Level: INFO
+Message: Add was on successfully  started
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/__init__.py
+
+Timestamp: 2024-07-20 15:29:56,174
+Logger Name: root
+Log Level: INFO
+Message: start generating vocabulary frequency...
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/edit_browser_menu/generate_data.py
+
+Timestamp: 2024-07-20 15:30:05,371
+Logger Name: root
+Log Level: INFO
+Message: start generating vocabulary frequency...
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/edit_browser_menu/generate_data.py
+
+Timestamp: 2024-07-20 16:03:09,569
+Logger Name: root
+Log Level: INFO
+Message: Add was on successfully  started
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/__init__.py
+
+Timestamp: 2024-07-20 21:10:58,277
+Logger Name: root
+Log Level: INFO
+Message: Add was on successfully  started
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/__init__.py
+
+Timestamp: 2024-07-20 21:16:16,372
+Logger Name: root
+Log Level: INFO
+Message: Add was on successfully  started
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/__init__.py
+
+Timestamp: 2024-07-20 21:30:32,967
+Logger Name: root
+Log Level: INFO
+Message: Add was on successfully  started
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/__init__.py
+
+Timestamp: 2024-07-20 21:31:05,180
+Logger Name: root
+Log Level: INFO
+Message: Add was on successfully  started
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/__init__.py
+
+Timestamp: 2024-07-20 21:31:27,964
+Logger Name: root
+Log Level: INFO
+Message: Add was on successfully  started
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/__init__.py
+
+Timestamp: 2024-07-20 21:34:01,326
+Logger Name: root
+Log Level: INFO
+Message: Add was on successfully  started
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/__init__.py
+
+Timestamp: 2024-07-20 21:34:18,669
+Logger Name: root
+Log Level: INFO
+Message: Add was on successfully  started
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/__init__.py
+
+Timestamp: 2024-07-20 21:35:34,130
+Logger Name: root
+Log Level: INFO
+Message: Add was on successfully  started
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/__init__.py
+
+Timestamp: 2024-07-20 21:38:09,377
+Logger Name: root
+Log Level: INFO
+Message: Add was on successfully  started
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/__init__.py
+
+Timestamp: 2024-07-20 21:38:29,847
+Logger Name: root
+Log Level: INFO
+Message: Closed about window.
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/main_tools_menu/main_window.py
+
+Timestamp: 2024-07-20 21:39:24,079
+Logger Name: root
+Log Level: INFO
+Message: Add was on successfully  started
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/__init__.py
+
+Timestamp: 2024-07-20 21:41:04,143
+Logger Name: root
+Log Level: INFO
+Message: Add was on successfully  started
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/__init__.py
+
+Timestamp: 2024-07-20 21:42:15,597
+Logger Name: root
+Log Level: INFO
+Message: Add was on successfully  started
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/__init__.py
+
+Timestamp: 2024-07-20 21:42:38,874
+Logger Name: root
+Log Level: INFO
+Message: Add was on successfully  started
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/__init__.py
+

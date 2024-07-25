@@ -4,19 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa2f9866-9dc7-4471-b075-232a812febb6" name="Changes" comment="remove unused files &#10;update about_add_on.py&#10;rename files">
+    <list default="true" id="aa2f9866-9dc7-4471-b075-232a812febb6" name="Changes" comment="rename config vocabulary dictionary to jmdict">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bunseki/edit_browser_menu/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/bunseki/addon_configs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bunseki/edit_browser_menu/generate_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/bunseki/edit_browser_menu/generate_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bunseki/edit_browser_menu/main_show_edit_menu_tabs.py" beforeDir="false" afterPath="$PROJECT_DIR$/bunseki/edit_browser_menu/main_show_edit_menu_tabs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bunseki/edit_browser_menu/tab_functionality.py" beforeDir="false" afterPath="$PROJECT_DIR$/bunseki/edit_browser_menu/tab_functionality.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bunseki/main_tools_menu/main_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/bunseki/main_tools_menu/main_window.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bunseki/settings/logger/basic_logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/bunseki/settings/logger/basic_logger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.MD" beforeDir="false" afterPath="$PROJECT_DIR$/config.MD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/bunseki.log_2024_07_19.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/bunseki.log_2024_07_19.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home_dir.py" beforeDir="false" afterPath="$PROJECT_DIR$/home_dir.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,12 +56,15 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Python.__init__ (1).executor&quot;: &quot;Run&quot;,
     &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
     &quot;Python.about_add_on.executor&quot;: &quot;Run&quot;,
     &quot;Python.anki_main_menu_tool.executor&quot;: &quot;Run&quot;,
     &quot;Python.config.executor&quot;: &quot;Run&quot;,
     &quot;Python.constant_paths.executor&quot;: &quot;Run&quot;,
     &quot;Python.generate_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.home_dir.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;Python.main_window (1).executor&quot;: &quot;Run&quot;,
     &quot;Python.main_window.executor&quot;: &quot;Run&quot;,
     &quot;Python.ui_main_window.executor&quot;: &quot;Run&quot;,
@@ -79,7 +74,7 @@
     &quot;Shell Script.icon.sh.executor&quot;: &quot;Run&quot;,
     &quot;Shell Script.rebuild.sh.executor&quot;: &quot;Run&quot;,
     &quot;Shell Script.rebuilt_about_add_on.sh.executor&quot;: &quot;Run&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/libs/janome-master&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -91,91 +86,22 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/libs/janome-master" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/bunseki" />
       <recent name="$PROJECT_DIR$/bunseki/pyqt6_ui_py/main_tools_menu" />
       <recent name="$PROJECT_DIR$/resources/readme_img" />
-      <recent name="$PROJECT_DIR$/bunseki/pyqt6_ui_py/main_tools_menu/ui" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/bunseki" />
+      <recent name="$PROJECT_DIR$/libs/janome" />
+      <recent name="$PROJECT_DIR$/libs" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/deprecate" />
-      <recent name="$PROJECT_DIR$/bunseki/update_info_ui" />
-      <recent name="$PROJECT_DIR$/resources/gui" />
-      <recent name="$PROJECT_DIR$/resources" />
+      <recent name="$PROJECT_DIR$/bunseki" />
     </key>
   </component>
-  <component name="RunManager" selected="Shell Script.rebuilt_about_add_on.sh">
-    <configuration name="addon_configs" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="bulk_generate_japanese_vocab_frequency" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bunseki/edit_browser_menu" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bunseki/addon_configs.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="constant_paths" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="bulk_generate_japanese_vocab_frequency" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bunseki/settings/constants" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bunseki/settings/constants/constant_paths.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="generate_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="bulk_generate_japanese_vocab_frequency" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bunseki/edit_browser_menu" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bunseki/edit_browser_menu/generate_data.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="update" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.main">
+    <configuration name="__init__ (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bulk_generate_japanese_vocab_frequency" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -189,7 +115,76 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/update.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/__init__.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="bulk_generate_japanese_vocab_frequency" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/deprecate" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/deprecate/__init__.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="home_dir" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="bulk_generate_japanese_vocab_frequency" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/home_dir.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="bulk_generate_japanese_vocab_frequency" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -214,19 +209,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.update" />
-      <item itemvalue="Python.addon_configs" />
-      <item itemvalue="Python.constant_paths" />
-      <item itemvalue="Python.generate_data" />
+      <item itemvalue="Python.__init__ (1)" />
+      <item itemvalue="Python.home_dir" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.__init__" />
       <item itemvalue="Shell Script.rebuilt_about_add_on.sh" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.home_dir" />
+        <item itemvalue="Python.__init__ (1)" />
+        <item itemvalue="Python.__init__" />
         <item itemvalue="Shell Script.rebuilt_about_add_on.sh" />
-        <item itemvalue="Python.update" />
-        <item itemvalue="Python.generate_data" />
-        <item itemvalue="Python.addon_configs" />
-        <item itemvalue="Python.constant_paths" />
       </list>
     </recent_temporary>
   </component>
@@ -267,7 +262,12 @@
       <workItem from="1721299144829" duration="4665000" />
       <workItem from="1721304773889" duration="642000" />
       <workItem from="1721311346507" duration="22688000" />
-      <workItem from="1721385235357" duration="9745000" />
+      <workItem from="1721385235357" duration="10467000" />
+      <workItem from="1721457236781" duration="6035000" />
+      <workItem from="1721500089997" duration="27000" />
+      <workItem from="1721500174840" duration="7303000" />
+      <workItem from="1721546062960" duration="1233000" />
+      <workItem from="1721583646792" duration="82000" />
     </task>
     <task id="LOCAL-00001" summary="Reformat code&#10;Rename variable&#10;Add documentation">
       <created>1662240050414</created>
@@ -459,7 +459,71 @@
       <option name="project" value="LOCAL" />
       <updated>1721392762996</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="remove unused code">
+      <option name="closed" value="true" />
+      <created>1721422522187</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1721422522187</updated>
+    </task>
+    <task id="LOCAL-00026" summary="update config files">
+      <option name="closed" value="true" />
+      <created>1721422534506</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1721422534506</updated>
+    </task>
+    <task id="LOCAL-00027" summary="update basic_logger.py">
+      <option name="closed" value="true" />
+      <created>1721422545507</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1721422545507</updated>
+    </task>
+    <task id="LOCAL-00028" summary="rename config.py to addon_configs.py&#10;add new configs">
+      <option name="closed" value="true" />
+      <created>1721422566772</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1721422566772</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Condense multiple functions into one &#10;in order to reduce code repetition. Now, only one &#10;function is needed for the two tab items and &#10;only one function is needed for accessing the different dictionaries. &#10;Also, it is possible to add a debug mode and disable warnings that might appear.">
+      <option name="closed" value="true" />
+      <created>1721422639582</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1721422639582</updated>
+    </task>
+    <task id="LOCAL-00030" summary="add third party libraries">
+      <option name="closed" value="true" />
+      <created>1721505424672</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1721505424672</updated>
+    </task>
+    <task id="LOCAL-00031" summary="update switch between frequency and vocabulary dictionary. &#10;There was a bug that made it so that it was not possible to switch between different dictionaries.">
+      <option name="closed" value="true" />
+      <created>1721539894383</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1721539894383</updated>
+    </task>
+    <task id="LOCAL-00032" summary="rename config vocabulary dictionary to jmdict">
+      <option name="closed" value="true" />
+      <created>1721539913606</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1721539913606</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -477,14 +541,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Reformat code&#10;Rename variable&#10;Add documentation" />
-    <MESSAGE value="Update readme &#10;add new documentation&#10;add new images &#10;update config file and config me" />
-    <MESSAGE value="add gitignore" />
-    <MESSAGE value="update config and README.MD" />
-    <MESSAGE value="Add log directory" />
     <MESSAGE value="add resource directory &#10;add ui files" />
     <MESSAGE value="add icons&#10;add ui files" />
-    <MESSAGE value="update config files" />
     <MESSAGE value="add new python directories&#10;rename source to bunseki" />
     <MESSAGE value="add scripts for building add ons" />
     <MESSAGE value="dialog for showing updated info about add on." />
@@ -500,18 +558,29 @@
     <MESSAGE value="deprecate old code" />
     <MESSAGE value="prepare unused files for deprecation" />
     <MESSAGE value="remove unused files &#10;update about_add_on.py&#10;rename files" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove unused files &#10;update about_add_on.py&#10;rename files" />
+    <MESSAGE value="remove unused code" />
+    <MESSAGE value="update config files" />
+    <MESSAGE value="update basic_logger.py" />
+    <MESSAGE value="rename config.py to addon_configs.py&#10;add new configs" />
+    <MESSAGE value="Condense multiple functions into one &#10;in order to reduce code repetition. Now, only one &#10;function is needed for the two tab items and &#10;only one function is needed for accessing the different dictionaries. &#10;Also, it is possible to add a debug mode and disable warnings that might appear." />
+    <MESSAGE value="add third party libraries" />
+    <MESSAGE value="update switch between frequency and vocabulary dictionary. &#10;There was a bug that made it so that it was not possible to switch between different dictionaries." />
+    <MESSAGE value="rename config vocabulary dictionary to jmdict" />
+    <option name="LAST_COMMIT_MESSAGE" value="rename config vocabulary dictionary to jmdict" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/1004691625$ui_main_window.coverage" NAME="ui_main_window Coverage Results" MODIFIED="1720760811890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bunseki/pyqt6_ui_py/main_tools_menu" />
     <SUITE FILE_PATH="coverage/1004691625$anki_main_menu_tool.coverage" NAME="anki_main_menu_tool Coverage Results" MODIFIED="1721198980831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bunseki/pyqt6_ui_py/main_tools_menu" />
-    <SUITE FILE_PATH="coverage/1004691625$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1721207367345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/1004691625$main_window__1_.coverage" NAME="main_window (1) Coverage Results" MODIFIED="1721221843523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bunseki/view/main_tools_menu" />
-    <SUITE FILE_PATH="coverage/1004691625$main_window.coverage" NAME="main_window Coverage Results" MODIFIED="1721200077923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bunseki/pyqt6_ui_py/main_tools_menu" />
+    <SUITE FILE_PATH="coverage/1004691625$home_dir.coverage" NAME="home_dir Coverage Results" MODIFIED="1721503820086" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/1004691625$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1721501148956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deprecate" />
     <SUITE FILE_PATH="coverage/1004691625$update.coverage" NAME="update Coverage Results" MODIFIED="1721301593093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/1004691625$config.coverage" NAME="config Coverage Results" MODIFIED="1721289082460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bunseki/edit_browser_menu" />
-    <SUITE FILE_PATH="coverage/1004691625$constant_paths.coverage" NAME="constant_paths Coverage Results" MODIFIED="1721282126825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bunseki/settings/constants" />
     <SUITE FILE_PATH="coverage/1004691625$generate_data.coverage" NAME="generate_data Coverage Results" MODIFIED="1721290537757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bunseki/edit_browser_menu" />
     <SUITE FILE_PATH="coverage/1004691625$about_add_on.coverage" NAME="about_add_on Coverage Results" MODIFIED="1721144579894" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bunseki/pyqt6_ui_py/main_tools_menu" />
+    <SUITE FILE_PATH="coverage/1004691625$main.coverage" NAME="main Coverage Results" MODIFIED="1721504237354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/1004691625$__init____1_.coverage" NAME="__init__ (1) Coverage Results" MODIFIED="1721503029436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/1004691625$main_window__1_.coverage" NAME="main_window (1) Coverage Results" MODIFIED="1721221843523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bunseki/view/main_tools_menu" />
+    <SUITE FILE_PATH="coverage/1004691625$main_window.coverage" NAME="main_window Coverage Results" MODIFIED="1721200077923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bunseki/pyqt6_ui_py/main_tools_menu" />
+    <SUITE FILE_PATH="coverage/1004691625$constant_paths.coverage" NAME="constant_paths Coverage Results" MODIFIED="1721282126825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bunseki/settings/constants" />
   </component>
 </project>

@@ -1,0 +1,48 @@
+Timestamp: 2024-07-23 12:44:49,775
+Logger Name: root
+Log Level: INFO
+Message: Add was on successfully  started
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/__init__.py
+
+Timestamp: 2024-07-23 12:57:38,905
+Logger Name: root
+Log Level: INFO
+Message: Add was on successfully  started
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/__init__.py
+
+Timestamp: 2024-07-23 13:12:08,737
+Logger Name: root
+Log Level: INFO
+Message: Add was on successfully  started
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/__init__.py
+
+Timestamp: 2024-07-23 13:24:19,280
+Logger Name: root
+Log Level: INFO
+Message: Add was on successfully  started
+Module: basic_logger
+Traceback: NoneType: None
+
+Function: catch_and_log_info
+Line: 147
+File Path: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/bunseki/settings/logger/basic_logger.py
+Calling File: /Users/christopherchandler/Library/Application Support/Anki2/addons21/1004691625/__init__.py
+

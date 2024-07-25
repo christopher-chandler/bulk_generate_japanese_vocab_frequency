@@ -11,7 +11,8 @@ Anki field.
 """
 
 # Standard
-# None
+import sys
+import os
 
 # Pip
 # None
@@ -19,7 +20,6 @@ Anki field.
 # Custom
 from .bunseki.main_tools_menu.anki_main_menu_tool import show_about_add_on
 from .bunseki.edit_browser_menu.main_show_edit_menu_tabs import show_edit_menu
-from anki.hooks import addHook
 
 
 show_about_add_on()
